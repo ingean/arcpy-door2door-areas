@@ -6,13 +6,13 @@ from modules.arcgis.dataset import export_dataset, count_rows, get_min_row
 log = Log(arcgis=True)
 arcpy.env.overwriteOutput = True
 
-SOURCE_GDB = r'D:\Data\Kreftforeningen_roder\namsos.gdb'
-AREAS = os.path.join(SOURCE_GDB, 'roder_krk_bruksenheter_split_single_statistics')
-MERGED_AREAS = os.path.join(SOURCE_GDB, 'roder_krk_bruksenheter_split_single_merge')
+#SOURCE_GDB = r'D:\Data\Kreftforeningen_roder\namsos.gdb'
+#AREAS = os.path.join(SOURCE_GDB, 'roder_krk_bruksenheter_split_single_statistics')
+#MERGED_AREAS = os.path.join(SOURCE_GDB, 'roder_krk_bruksenheter_split_single_merge')
 
 # Script inputs
-#AREAS = arcpy.GetParameter(0) # Areas to merge
-#MERGED_AREAS = arcpy.GetParameter(1)
+AREAS = arcpy.GetParameter(0) # Areas to merge
+MERGED_AREAS = arcpy.GetParameter(1)
 
 ABS_MIN_COUNT = 5
 MIN_COUNT = 20
